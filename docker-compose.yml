@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: flash-sale-mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: flash_sale
+      MYSQL_ROOT_PASSWORD: password123
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+
+  redis:
+    image: redis:alpine
+    container_name: flash-sale-redis
+    ports:
+      - "6380:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: flash-sale-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672" # 管理界面端口
