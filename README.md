@@ -19,7 +19,7 @@ A high-performance flash sale system built on a distributed architecture, design
 ## 📈 Load Testing Insights
 Conducted concurrency tests with 1000+ virtual users, achieving a standalone throughput of 400+ RPS (Requests Per Second).
 
-## 🚀 快速启动
+## 🚀 Quick Start
 1. Spin up Infrastructure：`docker-compose up -d`
 2. Install Dependencies：`pip install -r requirements.txt`
 3. Launch Application：`uvicorn main:app --reload`
